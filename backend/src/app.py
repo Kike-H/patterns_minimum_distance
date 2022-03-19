@@ -1,8 +1,10 @@
-from modules.patterns.minimum_distance import maximum_value 
-
-data = [[1,0,1],[1,1,1],[1,2,2],[-1,1,2],[0,0,2],[3,1,3],[0,1,3]]
+from modules.patterns.minimum_distance import get_class
+from modules.excel.convert import xlxs2Tuples
 
 if __name__ == '__main__':
-    print(maximum_value([1,-1],data))
+    data = xlxs2Tuples("/Users/kickehernandezd./Desktop/Book1.xlsx", 0)
+    vector = xlxs2Tuples("/Users/kickehernandezd./Desktop/Book1.xlsx", 1)[0]
+
+    print(get_class(vector, data))
 
     
