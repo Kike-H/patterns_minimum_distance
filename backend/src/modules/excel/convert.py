@@ -1,6 +1,6 @@
 import xlrd
 
-def xlxs2Tuples(uri: str, sheet: int) -> tuple[tuple]:
+def xlxs2Tuples(uri: str, sheet: int) -> tuple[tuple[float]]:
     """This method return a tuple with data in a excelf file"""
     data: list[tuple] = []
 

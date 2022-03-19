@@ -1,4 +1,4 @@
-def get_class(pattern: list[float], data: list[tuple[float]]) -> int:
+def get_class(pattern: tuple[float], data: tuple[tuple[float]]) -> int:
     """This method return a string with the number class"""
     values: list[float] = []
 
@@ -13,7 +13,7 @@ def get_class(pattern: list[float], data: list[tuple[float]]) -> int:
          # Calculate the max value between the two vectors and to values 
         values.append(sum_1-(0.5*sum_2)) 
     # Get the index of maximum value and get the class in the same index in data 
-    return data[values.index(max(values))][-1]
+    return int(data[values.index(max(values))][-1])
 
 
         
