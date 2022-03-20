@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/widgets/button_request.dart';
 import 'package:frontend/widgets/dropped_file_widget.dart';
 import 'package:frontend/widgets/dropzone_widget.dart';
 
@@ -30,10 +31,12 @@ class _MyAppState extends State<MyApp> {
           padding: const EdgeInsets.all(16),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             DroppedFileWidget(file: file),
+            const SizedBox(height: 15),
+            ButtonRequest(file: file),
             const SizedBox(height: 12),
             SizedBox(
                 height: 300,
-                child: DropZoneWidget(onDroppedFile: (file) => setState(() => this.file = file)))
+                child: DropZoneWidget(onDroppedFile: (file) => setState(() => this.file = file))),
           ]),
         ),
       ),
