@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:frontend/model/dropped_file.dart';
 import 'package:http/http.dart' as http;

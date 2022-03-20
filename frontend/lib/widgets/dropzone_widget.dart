@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:desktop_drop/desktop_drop.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
@@ -65,13 +63,11 @@ class _DropZoneWidgetState extends State<DropZoneWidget> {
   }
 
   Future acceptFile(DropDoneDetails urls) async {
-    var droppedFile;
     for (final f in urls.files) {
       var size = await f.length();
-      droppedFile = DroppedFile(url: f.path, name: f.name, type: "", bytes: size);
+      final droppedFile = DroppedFile(url: f.path, name: f.name, type: "", bytes: size);
+      widget.onDroppedFile(droppedFile);
     }
-
-    widget.onDroppedFile(droppedFile);
     setState(() => isHighlighted = false);
   }
 
