@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/Widgets/dropzone_widget.dart';
 
 import 'package:frontend/model/dropped_file.dart';
 
@@ -33,10 +32,10 @@ class DroppedFileWidget extends StatelessWidget {
       ));
 
   Widget buildFileDetails(DroppedFile file) {
-    final style = TextStyle(fontSize: 20);
+    const style = TextStyle(fontSize: 20);
 
     return Container(
-      margin: EdgeInsets.only(left: 24),
+      margin: const EdgeInsets.only(left: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

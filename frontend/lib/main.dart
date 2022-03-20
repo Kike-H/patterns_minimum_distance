@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Zeus App Calculator Patterns',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('⚡️️️'),
+          title: const Text("⚡️"),
           backgroundColor: Colors.black87,
         ),
         body: Container(
@@ -31,7 +31,9 @@ class _MyAppState extends State<MyApp> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             DroppedFileWidget(file: file),
             const SizedBox(height: 12),
-            SizedBox(height: 300, child: DropZoneWidget(onDroppedFile: (file) => setState(() => this.file = file)))
+            SizedBox(
+                height: 300,
+                child: DropZoneWidget(onDroppedFile: (file) => setState(() => this.file = file)))
           ]),
         ),
       ),
